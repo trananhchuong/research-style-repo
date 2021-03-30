@@ -1,0 +1,61 @@
+/* Positioning */
+/* Display & Box Model */
+/* Color */
+/* Text */
+/* Other */
+
+$text-main-color: #1a2b5f;
+$text-yellow-color: #ffc87a;
+
+@mixin FlexCustom($flexDirection: row, $justifyContent: center, $alginItem: center) {
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+    align-items: $alginItem;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    color: $text-main-color;
+
+    a {
+        color: $text-main-color;
+    }
+
+    .text-yellow {
+        color: $text-yellow-color;
+    }
+
+    .container {
+        max-width: 1170px;
+        margin: 0 auto;
+
+        .header {
+            @include FlexCustom(row, space-between);
+
+            padding-top: 3rem;
+            .header__left {
+            }
+            .header__right {
+                ul {
+                    @include FlexCustom();
+
+                    list-style-type: none;
+                    li {
+                        margin: 0 2.5rem;
+
+                        button {
+                            /* Display & Box Model */
+                            padding: 1.5rem 2rem;
+                            border-radius: 2rem;
+                            background: #fff;
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
