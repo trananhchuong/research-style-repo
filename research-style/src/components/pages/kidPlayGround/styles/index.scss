@@ -6,6 +6,7 @@
 
 $text-main-color: #1a2b5f;
 $text-yellow-color: #ffc87a;
+$bg-yellow-color: #ffdb7b;
 
 @mixin FlexCustom($flexDirection: row, $justifyContent: center, $alginItem: center) {
     display: flex;
@@ -14,14 +15,29 @@ $text-yellow-color: #ffc87a;
     align-items: $alginItem;
 }
 
+@mixin ButtonCustom($background: #fff) {
+    /* Display & Box Model */
+    padding: 1.5rem 2rem;
+    border-radius: 2rem;
+    background: $background;
+    min-width: 10rem;
+}
+
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
 
+    margin-bottom: 50px;
+
     color: $text-main-color;
 
-    a {
+    a,
+    button {
         color: $text-main-color;
+    }
+
+    button {
+        cursor: pointer;
     }
 
     .text-yellow {
@@ -36,6 +52,7 @@ $text-yellow-color: #ffc87a;
             @include FlexCustom(row, space-between);
 
             padding-top: 3rem;
+            padding-bottom: 13rem;
             .header__left {
             }
             .header__right {
@@ -47,13 +64,50 @@ $text-yellow-color: #ffc87a;
                         margin: 0 2.5rem;
 
                         button {
-                            /* Display & Box Model */
-                            padding: 1.5rem 2rem;
-                            border-radius: 2rem;
-                            background: #fff;
-                            width: 100px;
+                            @include ButtonCustom();
                         }
                     }
+
+                    .header__right--icon {
+                        i {
+                            margin-left: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hero {
+            @include FlexCustom(column);
+            .hero__logo {
+                h1 {
+                    font-size: 4.2rem;
+                }
+            }
+            .hero__description {
+                //display & box model
+                max-width: 35rem;
+                margin: 3rem 0 4rem;
+
+                //text
+                text-align: center;
+                font-weight: 300;
+            }
+            .hero__btn {
+                button {
+                    @include ButtonCustom();
+
+                    border: thin solid currentColor;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                }
+
+                .bg-yellow {
+                    background: $bg-yellow-color;
+                    border: none;
+
+                    margin-left: 2.5rem;
+                    box-shadow: 0px 10px 10px #f7f2d6;
                 }
             }
         }

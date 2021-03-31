@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 Header.propTypes = {
 
@@ -13,9 +12,9 @@ function Header() {
             </div>
             <div className="header__right">
                 <ul>
-                    <li>
+                    <li className="header__right--icon">
                         Events
-                        <i className="fa fa-arrow-down" aria-hidden="true"></i>
+                        <i className="fa fa-angle-down" aria-hidden="true"></i>
                     </li>
                     <li>
                         Pricing
