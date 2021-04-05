@@ -1,10 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
 import { IMAGES_BACK_GROUND } from '../../constants/ImageConstants';
+import About from './About';
 import Card from './Card';
+import Footer from './Footer';
 import Header from './Header';
 import Hero from './Hero';
 import './styles/index.scss';
+import Subscribe from './Subscribe';
 
 
 function KidPlayGround(props: any) {
@@ -61,6 +64,9 @@ function KidPlayGround(props: any) {
                 <Header />
                 <Hero />
                 {renderListCard()}
+                <Subscribe />
+                <About />
+                <Footer />
             </div>
         </div>
     );
