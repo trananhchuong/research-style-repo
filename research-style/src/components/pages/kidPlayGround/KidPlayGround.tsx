@@ -3,6 +3,7 @@ import React from 'react';
 import { IMAGES_BACK_GROUND } from '../../constants/ImageConstants';
 import About from './About';
 import Card from './Card';
+import Connect from './Connect';
 import Footer from './Footer';
 import Header from './Header';
 import Hero from './Hero';
@@ -64,6 +65,7 @@ function KidPlayGround(props: any) {
                 <Header />
                 <Hero />
                 {renderListCard()}
+                <Connect/>
                 <Subscribe />
                 <About />
                 <Footer />

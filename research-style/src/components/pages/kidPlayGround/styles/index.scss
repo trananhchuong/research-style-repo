@@ -158,6 +158,40 @@ $bg-yellow-color: #ffdb7b;
             }
         }
 
+        .connect-box {
+            margin-top: 20rem;
+            .title {
+                text-align: center;
+                margin-bottom: 4.5rem;
+                
+                h1{
+                    margin-bottom: 4.5rem;
+                }
+
+                h4{
+                    span{
+                        color: #ffcf8b;
+                    }
+                }
+            }
+
+            .list-img {
+                display: flex;
+                .img-box {
+                    @include FlexCustom(row, space-between, stretch, wrap);
+                    padding: 0 15px;
+
+                    img {
+                        object-fit: cover;
+                        width: calc(25% - 22.5px);
+                        flex: 1;
+
+                        border-radius: 3rem;
+                    }
+                }
+            }
+        }
+
         .subscribe-box {
             display: flex;
             justify-content: space-between;
