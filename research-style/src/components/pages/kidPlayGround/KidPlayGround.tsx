@@ -7,6 +7,7 @@ import Connect from './Connect';
 import Footer from './Footer';
 import Header from './Header';
 import Hero from './Hero';
+import Partners from './Partners';
 import './styles/index.scss';
 import Subscribe from './Subscribe';
 
@@ -65,6 +66,7 @@ function KidPlayGround(props: any) {
                 <Header />
                 <Hero />
                 {renderListCard()}
+                <Partners/>
                 <Connect/>
                 <Subscribe />
                 <About />
